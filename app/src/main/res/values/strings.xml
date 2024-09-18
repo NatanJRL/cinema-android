@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Cinema</string>
+    <string name="assunto">Assunto</string>
+    <string name="mensagem">Mensagem</string>
+    <string name="submit">Enviar\n</string>
+    <string name="menu">menu\n</string>
+</resources>

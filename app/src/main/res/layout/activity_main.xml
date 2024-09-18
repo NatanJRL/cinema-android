@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_24dp_5f6368_fill0_wght400_grad0_opsz24" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/movieName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/imageMovie"
+        tools:text="Transformers: A vingança dos derrotados" />
+
+    <TextView
+        android:id="@+id/movieName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/imageMovie"
+        tools:text="Transformers: A vingança dos derrotados" />
+
+    <TextView
+        android:id="@+id/legendMovie"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="serif"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/movieName"
+        tools:text="Ação | Ficção científica | 2009 | M/12 | 2h20" />
+
+    <TextView
+        android:id="@+id/castTitle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:fontFamily="serif"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/legendMovie"
+        tools:text="IMDB 10/10" />
+
+    <TextView
+        android:id="@+id/castTitle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="56dp"
+        android:fontFamily="serif"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/legendMovie"
+        tools:text="Cast" />
+
+    <ImageView
+        android:id="@+id/imageViewCast2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewCast3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCast1"
+        tools:layout_editor_absoluteY="309dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageViewCast3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCast2"
+        tools:layout_editor_absoluteY="309dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/viewBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier3" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="imageMovie,imageViewCast1" />
+
+    <ImageView
+        android:id="@+id/imageMovie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10sp"
+        app:layout_constraintDimensionRatio="2:3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu"
+        app:srcCompat="@drawable/movie_poster" />
+
+    <ImageView
+        android:id="@+id/imageViewCast1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewCast2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageMovie"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        tools:layout_editor_absoluteY="309dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <View
+        android:id="@+id/viewBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#C0C0C0"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/viewSelectedDayBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewQuarta"
+        app:layout_constraintEnd_toEndOf="@+id/textViewQuarta"
+        app:layout_constraintStart_toStartOf="@+id/textViewQuarta"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground" />
+
+    <View
+        android:id="@+id/viewBorder"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:layout_constraintStart_toStartOf="@id/viewSelectedDayBackground"
+        app:layout_constraintEnd_toEndOf="@id/viewSelectedDayBackground"
+        app:layout_constraintTop_toTopOf="@id/viewSelectedDayBackground"
+        />
+
+    <TextView
+        android:id="@+id/textViewDay18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:text="18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground" />
+
+    <TextView
+        android:id="@+id/textViewQuarta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="QUA"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDay18"
+        app:layout_constraintStart_toStartOf="@+id/textViewDay18"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDay18" />
+
+    <TextView
+        android:id="@+id/textViewDay19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:text="19"
+        app:layout_constraintStart_toEndOf="@id/textViewDay18"
+        app:layout_constraintTop_toTopOf="@id/viewBackground" />
+
+    <TextView
+        android:id="@+id/textViewQuinta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="QUI"
+        app:layout_constraintEnd_toEndOf="@id/textViewDay19"
+        app:layout_constraintStart_toStartOf="@id/textViewDay19"
+        app:layout_constraintTop_toBottomOf="@id/textViewDay19" />
+
+    <TextView
+        android:id="@+id/textViewDay20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:text="20"
+        app:layout_constraintStart_toEndOf="@id/textViewDay19"
+        app:layout_constraintTop_toTopOf="@id/viewBackground"
+
+        />
+
+    <TextView
+        android:id="@+id/textViewSexta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SEX"
+        app:layout_constraintEnd_toEndOf="@id/textViewDay20"
+        app:layout_constraintStart_toStartOf="@id/textViewDay20"
+        app:layout_constraintTop_toBottomOf="@id/textViewDay20"
+
+        />
+
+    <TextView
+        android:id="@+id/textViewDay21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:text="21"
+        app:layout_constraintStart_toEndOf="@id/textViewDay20"
+        app:layout_constraintTop_toTopOf="@id/viewBackground" />
+
+    <TextView
+        android:id="@+id/textViewSabado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SAB"
+        app:layout_constraintEnd_toEndOf="@id/textViewDay21"
+        app:layout_constraintStart_toStartOf="@id/textViewDay21"
+        app:layout_constraintTop_toBottomOf="@id/textViewDay21" />
+
+    <TextView
+        android:id="@+id/textViewDay22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:text="22"
+        app:layout_constraintStart_toEndOf="@id/textViewDay21"
+        app:layout_constraintTop_toTopOf="@id/viewBackground"
+
+        />
+
+    <TextView
+        android:id="@+id/textViewDomingo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="DOM"
+        app:layout_constraintEnd_toEndOf="@id/textViewDay22"
+        app:layout_constraintStart_toStartOf="@id/textViewDay22"
+        app:layout_constraintTop_toBottomOf="@id/textViewDay22" />
+
+    <TextView
+        android:id="@+id/textViewDay23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:text="23"
+        app:layout_constraintStart_toEndOf="@id/textViewDay22"
+        app:layout_constraintTop_toTopOf="@id/viewBackground"
+
+        />
+
+    <TextView
+        android:id="@+id/textViewSegunda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SEG"
+        app:layout_constraintEnd_toEndOf="@id/textViewDay23"
+        app:layout_constraintStart_toStartOf="@id/textViewDay23"
+        app:layout_constraintTop_toBottomOf="@id/textViewDay23" />
+
+    <TextView
+        android:id="@+id/textViewDay24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:text="23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewDay23"
+
+        app:layout_constraintTop_toTopOf="@id/viewBackground" />
+
+    <TextView
+        android:id="@+id/textViewTerca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TER"
+        app:layout_constraintEnd_toEndOf="@id/textViewDay24"
+        app:layout_constraintStart_toStartOf="@id/textViewDay24"
+        app:layout_constraintTop_toBottomOf="@id/textViewDay24" />
+
+    <TextView
+        android:id="@+id/textViewCinemaNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Belas Artes"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/viewBackground"
+        app:layout_constraintTop_toBottomOf="@+id/viewSelectedDayBackground" />
+
+    <TextView
+        android:id="@+id/textViewEndereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avenida rua do bairro 109"
+        app:layout_constraintEnd_toEndOf="@id/textViewCinemaNome"
+        app:layout_constraintStart_toStartOf="@id/textViewCinemaNome"
+        tools:layout_editor_absoluteY="626dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
